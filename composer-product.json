@@ -1,0 +1,44 @@
+{
+	"name": "nextcloud/accountexport",
+	"description": "Export accounts data",
+	"license": "AGPL-3.0-or-later",
+	"authors": [
+		{
+			"name": "Cuong Hoang Duc",
+			"email": "cuong@gmail.com",
+			"homepage": "https://the-semicolon.dev/"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"OCA\\AccountExport\\": "lib/"
+		}
+	},
+	"scripts": {
+		
+		"lint": "find . -name \\*.php -not -path './vendor/*' -not -path './vendor-bin/*' -not -path './build/*' -print0 | xargs -0 -n1 php -l",
+		"cs:check": "php-cs-fixer fix --dry-run --diff",
+		"cs:fix": "php-cs-fixer fix",
+		"psalm": "psalm --threads=1 --no-cache",
+		"test:unit": "phpunit tests -c tests/phpunit.xml --colors=always --fail-on-warning --fail-on-risky",
+		"openapi": "generate-spec"
+	},
+	"require": {
+		
+		"phpoffice/phpspreadsheet": "^3.5"
+	},
+	"require-dev": {
+		
+	},
+	"config": {
+		
+		"optimize-autoloader": true,
+		"sort-packages": true,
+		"platform": {
+			"php": "8.1"
+		},
+		"allow-plugins": {
+			"bamarni/composer-bin-plugin": false
+		}
+	}
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+	<id>accountexport</id>
+	<name>Account Export</name>
+	<summary>Export accounts data</summary>
+	<description>Export accounts data</description>
+	<version>1.0.0</version>
+	<licence>agpl</licence>
+	<author mail="cuong@gmail.com" homepage="https://the-semicolon.dev/">Cuong Hoang Duc</author>
+	<namespace>AccountExport</namespace>
+	<category>tools</category>
+	<bugs>https://the-semicolon.dev/</bugs>
+	<dependencies>
+		<nextcloud min-version="29" max-version="30"/>
+		<group>admin</group>
+	</dependencies>
+	<navigations>
+		<navigation>
+			<id>accountexport</id>
+			<name>Account Export</name>
+			<route>accountexport.page.index</route>
+			<icon>app.svg</icon>
+			<type>link</type>
+		</navigation>
+	</navigations>
+</info>
